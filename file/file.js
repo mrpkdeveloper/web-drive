@@ -78,6 +78,8 @@ function addFileHTML(fname, resourceid, parentid, parentdiv) {
 
 function viewFile(target) {
   let fid = target.attributes.rid.value;
+  let oldcurrentfolderid = currentfolderid;
+  currentfolderid = fid;
 
   //beautify options
   let notepaddivtemplate = templates.content.querySelector("[purpose=notepad]");
@@ -168,6 +170,8 @@ function viewFile(target) {
   // close btn
   function closebtnfun() {
     document.getElementById("notepad").classList.remove("active");
+    currentfolderid = oldcurrentfolderid;
+    crossbtnview.removeEventListener("click", closebtnfun);
   }
 
   let crossbtnnotepad = notepaddiv.querySelector("[purpose=closebtnnotepad]");

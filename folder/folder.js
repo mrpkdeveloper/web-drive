@@ -137,6 +137,8 @@ function viewFolder(target, flag) {
     crossbtnview.removeEventListener("click", closebtnfun);
     addfolderbtn.removeEventListener("click", addfbtn);
     addfolderbtn.addEventListener("click", addfolder);
+    addfilebtn.removeEventListener("click", addfilebtnfn);
+    addfilebtn.addEventListener("click", addfile);
   }
 
   crossbtnview.addEventListener("click", closebtnfun);
