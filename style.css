@@ -1,0 +1,13 @@
+body {
+  background-image: url("bg.jpg");
+}
+
+.homecontainer {
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  /* border: 1px solid white; */
+  height: 95%;
+  width: 40%;
+}
